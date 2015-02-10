@@ -24,6 +24,7 @@ if [ ! -f "$SPEEDTEST_BIN" ]; then
   echo "acquiring speedtest-cli"
   git submodule init
   git submodule update
+  echo
 fi
 
 echo "network bench"
