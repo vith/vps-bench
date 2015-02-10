@@ -7,7 +7,7 @@ MISSING_REQUIREMENT=0
 check_requirement () {
   if ! command -v "$1" > /dev/null; then
     echo "command not found: $1"
-    REQUIREMENT_MISSING=1
+    MISSING_REQUIREMENT=1
   fi
 }
 
@@ -16,7 +16,7 @@ check_requirement "fio"
 check_requirement "openssl"
 check_requirement "python"
 
-if [ $REQUIREMENT_MISSING ]; then
+if [ $MISSING_REQUIREMENT ]; then
   exit 1
 fi
 
